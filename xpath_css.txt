@@ -1,0 +1,114 @@
+Google search page:
+
+query input:
+	//*[@id='lst-ib']
+	input#lst-ib
+
+"search in Google" button:
+	//input[@name='btnK']
+	[name=btnK]
+
+"I'm Feeling lucky!" button:
+	//input[@name='btnI']
+	[name=btnI]
+
+ALL 10 “nyan cat” result links:
+	//div[@class='g']
+	div.g
+
+n-th ‘o’ letter in Goooooooooogle:
+	//*[@id='nav']/tbody/tr/td[n]/a/span
+	td:nth-child(n)
+
+
+Mail.ru login page:
+
+login input:
+	//*[@id='mailbox__login']
+	#mailbox__login
+
+password input:
+	//*[@id='mailbox__password']
+	#mailbox__password
+
+‘Enter’ button:
+	//*[@id='mailbox__auth__button']
+	#mailbox__auth__button
+
+
+Mail.ru main page (logged in):
+
+links to folders (incoming, outcoming, spam, deleted, drafts):
+incoming:
+	//*[@class='b-nav__item__text b-nav__item__text_unread']
+	.b-nav__item__text.b-nav__item__text_unread
+
+outcoming:
+	//a[@href='/messages/sent/']//span[@class='b-nav__item__text']
+	a[href*="sent"] span.b-nav__item__text
+
+spam:
+	//a[@href='/messages/spam/']//span[@class='b-nav__item__text']
+	a[href*="spam"] span.b-nav__item__text
+
+deleted:
+	//a[@href='/messages/trash/']//span[@class='b-nav__item__text']
+	a[href*="trash"] span.b-nav__item__text
+
+drafts:
+	//a[@href='/messages/drafts/']//span[@class='b-nav__item__text']
+	a[href*="drafts"] span.b-nav__item__text
+
+
+action buttons (write new letter, delete, mark as spam, mark as not spam, mark as read, move to another folder)
+
+write new letter:
+	//a[@class='b-toolbar__btn js-shortcut']//span[@class='b-toolbar__btn__text b-toolbar__btn__text_pad']
+	a.b-toolbar__btn.js-shortcut span.b-toolbar__btn__text.b-toolbar__btn__text_pad
+
+delete:
+	//div[@class='b-toolbar__btn b-toolbar__btn_false b-toolbar__btn_false b-toolbar__btn_adaptive b-toolbar__btn_adaptive_msgl-high b-toolbar__btn_grouped b-toolbar__btn_grouped_first js-shortcut']//span[@class='b-toolbar__btn__text b-toolbar__btn__text_pad']
+	div.b-toolbar__btn.b-toolbar__btn_false.b-toolbar__btn_false.b-toolbar__btn_adaptive.b-toolbar__btn_adaptive_msgl-high.b-toolbar__btn_grouped.b-toolbar__btn_grouped_first.js-shortcut span.b-toolbar__btn__text.b-toolbar__btn__text_pad
+
+mark as spam:
+	//div[@class='b-toolbar__btn b-toolbar__btn_ b-toolbar__btn_ b-toolbar__btn_false b-toolbar__btn_adaptive b-toolbar__btn_adaptive_msgl-high js-shortcut' and @data-name='spam']//span[@class='b-toolbar__btn__text b-toolbar__btn__text_pad']
+	div.b-toolbar__btn.b-toolbar__btn_.b-toolbar__btn_.b-toolbar__btn_false.b-toolbar__btn_adaptive.b-toolbar__btn_adaptive_msgl-high.js-shortcut span.b-toolbar__btn__text.b-toolbar__btn__text_pad
+
+mark as not spam:
+	//div[@class='b-toolbar__btn b-toolbar__btn_ b-toolbar__btn_ b-toolbar__btn_false b-toolbar__btn_adaptive b-toolbar__btn_adaptive_msgl-high js-shortcut' and @data-name='noSpam']//span[@class='b-toolbar__btn__text b-toolbar__btn__text_pad']
+	div.b-toolbar__btn.b-toolbar__btn_.b-toolbar__btn_.b-toolbar__btn_false.b-toolbar__btn_adaptive.b-toolbar__btn_adaptive_msgl-high.js-shortcut span.b-toolbar__btn__text.b-toolbar__btn__text_pad
+
+mark as read:
+	//a[@class='b-dropdown__list__item' and @data-name='read']//span[@class='b-dropdown__list__item__text']
+	[data-name=read] span.b-dropdown__list__item__text
+
+move to another folder:
+	//div[@data-group='moveTo']//span[@class='b-dropdown__ctrl__text']
+	[data-group=moveTo] span.b-dropdown__ctrl__text
+
+Checkbox for one exact letter:
+	(//div[@data-mnemo='letters']//div[@class='b-checkbox__box'])[1]
+	div.b-datalist__body div.b-datalist__item:first-child div.b-checkbox__box
+
+Opening link for one exact letter:
+	(//div[@data-mnemo='letters']//div[@class='b-datalist__item__subj'])[1]
+	div.b-datalist__body div.b-datalist__item:first-child div.b-datalist__item__subj	
+
+
+New letter page
+
+inputs for address:
+	//textarea[@data-original-name='To']
+	textarea.js-input.compose__labels__input
+
+topic:
+	//div[@class='compose-head__row-wrapper compose-head__row-wrapper_to js-row']//textarea[@class='js-input compose__labels__input']
+	.compose-head__row-wrapper.compose-head__row-wrapper_to.js-row .js-input.compose__labels__input
+
+text:
+	//span[@class='mceEditor defaultSkin']//iframe
+	.mceEditor.defaultSkin iframe
+
+file attach:
+	//div[@class='js-input-file compose-attachments__item']//span[@class='compose-label__text']
+	.js-input-file.compose-attachments__item .compose-label__text

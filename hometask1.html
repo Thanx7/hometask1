@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="google.com" />
+<title>hometask1</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">hometask1</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>https://google.com/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//*[@id='lst-ib']</td>
+	<td>Banana song</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//a[@href='https://www.youtube.com/watch?v=wCkerYMffMo']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Despicable Me 2 | Minions Banana Song (2013) SNSD TTS - YouTube</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=div.watch-view-count</td>
+	<td>k</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>'${k}'.replace(&quot; views&quot;, &quot;&quot;)&nbsp;&nbsp;</td>
+	<td>k</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>'${k}'.replace(&quot;,&quot;, &quot;&quot;)&nbsp;&nbsp;</td>
+	<td>k</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>'${k}'.replace(&quot;,&quot;, &quot;&quot;)&nbsp;&nbsp;</td>
+	<td>k</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${k}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyEval</td>
+	<td>storedVars['k']&gt;40000000</td>
+	<td>true</td>
+</tr>
+</tbody></table>
+</body>
+</html>
